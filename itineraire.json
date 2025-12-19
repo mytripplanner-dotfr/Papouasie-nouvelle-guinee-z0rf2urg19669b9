@@ -1,0 +1,445 @@
+{
+  "pays": "Papouasie-Nouvelle-Guinée",
+  "drapeau": "🇵🇬",
+  "symbole": "🦜",
+  "titre": "Aventure au Cœur de la Papouasie-Nouvelle-Guinée: Culture et Nature Sauvage",
+  "budget_total": "11000€",
+  "duree": "19 jours",
+  "temps_vol": "30h depuis Renault, etats unis avec escales",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Port Moresby",
+      "legende": "Après un long voyage, votre aventure débute dans la capitale animée de la Papouasie-Nouvelle-Guinée. Prenez le temps de vous installer et de vous imprégner de l'atmosphère locale. La journée sera légère pour vous permettre de récupérer du décalage horaire et de la fatigue du vol. Profitez de la fin de journée pour une première découverte des environs immédiats de votre hôtel.",
+      "lieu": "Port Moresby",
+      "activites": [
+        "🛬 <strong>Arrivée et transfert</strong>: Après un long voyage, vous serez accueilli à l'aéroport international Jackson. Un transfert privé vous mènera à votre hôtel pour un repos bien mérité."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le visa est obligatoire pour la Papouasie-Nouvelle-Guinée. Il est recommandé de l'obtenir avant le départ."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏛️",
+      "titre": "Culture et Histoire à Port Moresby",
+      "legende": "Plongez dans l'histoire et la culture fascinante de la Papouasie-Nouvelle-Guinée. Cette journée vous offrira un aperçu des traditions ancestrales et de l'art contemporain du pays. Vous découvrirez des artefacts uniques et des récits captivants qui façonnent l'identité de cette nation insulaire. Une immersion douce pour comprendre la richesse de ce peuple.",
+      "lieu": "Port Moresby",
+      "activites": [
+        "🏛️ <strong>Visite du Musée National et de la Galerie d'Art</strong>: Explorez les collections d'artefacts tribaux, de masques et d'œuvres d'art contemporain qui racontent l'histoire et la diversité culturelle du pays.",
+        "🌳 <strong>Découverte du Parlement National</strong>: Admirez l'architecture impressionnante du bâtiment du Parlement, inspirée des maisons des esprits traditionnelles, et apprenez-en plus sur la gouvernance locale."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Engagez un guide local pour une meilleure compréhension des expositions et de l'histoire."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "✈️",
+      "titre": "Envol vers les Hautes Terres et Rencontre Culturelle",
+      "legende": "Aujourd'hui, vous quittez la capitale pour les majestueuses Hautes Terres, le cœur culturel de la Papouasie-Nouvelle-Guinée. Un vol intérieur vous mènera à Mount Hagen, où vous serez immédiatement plongé dans un monde de traditions ancestrales. La rencontre avec une communauté locale vous offrira un aperçu authentique de leur mode de vie et de leurs coutumes.",
+      "lieu": "Mount Hagen",
+      "activites": [
+        "✈️ <strong>Vol vers Mount Hagen</strong>: Prenez un vol matinal pour Mount Hagen, la troisième plus grande ville du pays et porte d'entrée des Hautes Terres.",
+        "🤝 <strong>Visite d'un village traditionnel</strong>: Rencontrez les habitants d'un village Huli ou Melpa, découvrez leurs \"sing-sings\" (danses et chants) et leur artisanat unique."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Demandez toujours la permission avant de photographier les personnes, par respect pour leur culture."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏞️",
+      "titre": "Exploration des Marchés et Paysages Montagneux",
+      "legende": "Immergez-vous davantage dans la vie quotidienne des Hautes Terres en explorant le marché animé de Mount Hagen. C'est un festival de couleurs, de sons et d'odeurs où les produits locaux et l'artisanat sont rois. L'après-midi sera dédiée à la découverte des paysages environnants, offrant des vues imprenables sur les vallées verdoyantes et les montagnes brumeuses.",
+      "lieu": "Mount Hagen",
+      "activites": [
+        "🛍️ <strong>Marché de Mount Hagen</strong>: Flânez dans le marché local, un lieu vibrant où les différentes tribus viennent vendre leurs produits agricoles et artisanaux.",
+        "⛰️ <strong>Randonnée légère dans les environs</strong>: Profitez d'une balade guidée pour admirer les paysages luxuriants des Hautes Terres et observer la faune locale."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "💰",
+          "titre": "Monnaie",
+          "texte": "La monnaie locale est le Kina (PGK). Prévoyez de la petite monnaie pour les marchés."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🛶",
+      "titre": "Vers le Mystérieux Fleuve Sepik",
+      "legende": "Aujourd'hui marque un changement de décor spectaculaire alors que vous vous dirigez vers la région du fleuve Sepik. Un vol vous mènera à Wewak, point de départ de votre exploration de cette voie navigable légendaire. Le Sepik est réputé pour ses cultures tribales uniques, son art complexe et ses paysages fluviaux d'une beauté sauvage. Préparez-vous à une immersion profonde.",
+      "lieu": "Wewak / Fleuve Sepik",
+      "activites": [
+        "✈️ <strong>Vol vers Wewak</strong>: Prenez un vol matinal de Mount Hagen à Wewak, la porte d'entrée de la région du Sepik.",
+        "🚤 <strong>Transfert vers le fleuve Sepik</strong>: De Wewak, un transfert en véhicule puis en pirogue motorisée vous mènera à votre lodge ou village d'accueil le long du fleuve."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🦟",
+          "titre": "Santé",
+          "texte": "La région du Sepik est une zone à risque de paludisme. Prévoyez des répulsifs et une prophylaxie."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🎭",
+      "titre": "Art et Traditions du Sepik",
+      "legende": "Naviguez sur les eaux calmes du fleuve Sepik, véritable artère vitale pour les communautés qui le bordent. Cette journée sera dédiée à la découverte de l'art et des traditions ancestrales des peuples du Sepik. Vous visiterez des \"maisons des esprits\" ornées de sculptures impressionnantes et assisterez à des démonstrations d'artisanat, témoins d'un savoir-faire unique transmis de génération en génération.",
+      "lieu": "Fleuve Sepik",
+      "activites": [
+        "🛶 <strong>Exploration en pirogue</strong>: Naviguez sur le fleuve Sepik, observant la vie quotidienne le long des rives et la faune aquatique.",
+        "🗿 <strong>Visite de maisons des esprits (Haus Tambaran)</strong>: Découvrez les impressionnantes maisons des esprits, centres de la vie culturelle et spirituelle des villages, ornées de sculptures et de peintures."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Le Sepik est réputé pour ses sculptures sur bois. Achetez directement auprès des artisans pour soutenir les communautés."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🐊",
+      "titre": "Faune et Légendes du Fleuve",
+      "legende": "Poursuivez votre immersion dans l'écosystème unique du Sepik. Cette journée vous mènera à travers des paysages de jungle dense et de marécages, à la rencontre de la faune locale. Vous aurez l'occasion d'en apprendre davantage sur les légendes et les croyances qui entourent le fleuve, notamment le rôle sacré du crocodile dans la culture Sepik. Une expérience authentique au cœur de la nature sauvage.",
+      "lieu": "Fleuve Sepik",
+      "activites": [
+        "🌿 <strong>Randonnée dans la jungle</strong>: Accompagné d'un guide local, explorez la forêt tropicale bordant le fleuve, à la recherche d'oiseaux exotiques et d'autres animaux.",
+        "🎣 <strong>Pêche traditionnelle ou observation des crocodiles</strong>: Participez à une session de pêche avec les locaux ou tentez d'apercevoir des crocodiles dans leur habitat naturel."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🗣️",
+          "titre": "Langues",
+          "texte": "Le Tok Pisin est la langue véhiculaire. Apprendre quelques mots sera très apprécié par les locaux."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🌅",
+      "titre": "Lever de Soleil sur le Sepik et Retour",
+      "legende": "Profitez d'un dernier lever de soleil spectaculaire sur le fleuve Sepik, un moment de quiétude avant de reprendre le chemin du retour. Cette matinée sera l'occasion de savourer les derniers instants de cette expérience unique, peut-être en visitant un dernier village ou en échangeant avec vos hôtes. Vous quitterez le Sepik avec des souvenirs impérissables de sa culture et de sa nature indomptée.",
+      "lieu": "Fleuve Sepik / Wewak",
+      "activites": [
+        "🌄 <strong>Lever de soleil sur le fleuve</strong>: Observez le soleil se lever sur le Sepik, offrant des couleurs magnifiques et une atmosphère paisible.",
+        "🚤 <strong>Retour vers Wewak</strong>: Reprenez la pirogue motorisée puis le véhicule pour retourner à Wewak, en prévision de votre vol du lendemain."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Eau",
+          "texte": "Buvez uniquement de l'eau en bouteille ou purifiée pour éviter les problèmes de santé."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "✈️",
+      "titre": "De Wewak à Port Moresby",
+      "legende": "Après l'aventure fluviale, cette journée est consacrée au retour vers la capitale. Un vol intérieur vous ramènera à Port Moresby, offrant une transition entre les paysages sauvages du Sepik et l'ambiance plus urbaine. Profitez de ce temps de trajet pour vous reposer et réfléchir aux expériences vécues. L'après-midi sera libre pour une détente bien méritée ou une exploration légère.",
+      "lieu": "Port Moresby",
+      "activites": [
+        "✈️ <strong>Vol Wewak - Port Moresby</strong>: Prenez un vol intérieur pour retourner à Port Moresby. Le temps de vol est d'environ 1h30.",
+        "🏨 <strong>Détente à l'hôtel</strong>: Profitez de l'après-midi pour vous reposer à l'hôtel ou explorer les environs immédiats à votre guise."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🌐",
+          "titre": "Connectivité",
+          "texte": "La connexion internet peut être limitée et coûteuse en dehors des grandes villes."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🌋",
+      "titre": "Volcans et Histoire à Rabaul",
+      "legende": "Envolez-vous vers la province de la Nouvelle-Bretagne orientale, une région marquée par son histoire volcanique et son rôle crucial pendant la Seconde Guerre mondiale. Rabaul, autrefois une ville florissante, a été ensevelie par les cendres volcaniques, mais son esprit perdure. Vous explorerez les vestiges de cette histoire tumultueuse et les paysages lunaires façonnés par les volcans actifs.",
+      "lieu": "Rabaul / Kokopo",
+      "activites": [
+        "✈️ <strong>Vol vers Rabaul/Kokopo</strong>: Prenez un vol matinal de Port Moresby à Rabaul (aéroport de Tokua), puis transfert vers Kokopo.",
+        "🌋 <strong>Observation des volcans actifs</strong>: Admirez les volcans Tavurvur et Vulcan, témoins de l'activité géologique intense de la région."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Sécurité",
+          "texte": "Respectez toujours les consignes de sécurité près des volcans actifs et des sites historiques."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "⚔️",
+      "titre": "Vestiges de Guerre et Sources Chaudes",
+      "legende": "Cette journée vous plongera dans le passé de Rabaul, un site stratégique majeur durant la Seconde Guerre mondiale. Vous explorerez les tunnels et les bunkers japonais, témoins silencieux des combats acharnés. L'après-midi offrira un contraste apaisant avec une visite des sources chaudes volcaniques, une occasion unique de se détendre dans un cadre naturel spectaculaire.",
+      "lieu": "Rabaul / Kokopo",
+      "activites": [
+        "🪖 <strong>Visite des tunnels et bunkers japonais</strong>: Explorez les vastes réseaux de tunnels creusés par les Japonais pendant la Seconde Guerre mondiale.",
+        "♨️ <strong>Bains dans les sources chaudes volcaniques</strong>: Détendez-vous dans les sources chaudes naturelles, chauffées par l'activité volcanique souterraine."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Orientation",
+          "texte": "Un guide local est indispensable pour naviguer en toute sécurité sur les sites historiques et volcaniques."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🐠",
+      "titre": "Plongée et Vie Marine de Rabaul",
+      "legende": "Les eaux autour de Rabaul sont un paradis pour les plongeurs et les amateurs de snorkeling, abritant une vie marine foisonnante et de nombreuses épaves de la Seconde Guerre mondiale. Cette journée vous permettra d'explorer ces trésors sous-marins, offrant des rencontres inoubliables avec des poissons colorés et des coraux vibrants. Une expérience aquatique mémorable vous attend.",
+      "lieu": "Rabaul / Kokopo",
+      "activites": [
+        " snorkelling <strong>Plongée ou snorkeling dans la baie de Rabaul</strong>: Explorez les récifs coralliens colorés et les épaves de la Seconde Guerre mondiale, abritant une vie marine abondante.",
+        "🏝️ <strong>Excursion sur une île voisine</strong>: Profitez d'une excursion en bateau vers une petite île pour vous détendre sur ses plages de sable blanc et nager dans des eaux cristallines."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🤿",
+          "titre": "Équipement",
+          "texte": "Les centres de plongée locaux proposent la location d'équipement. Pensez à réserver à l'avance."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "✈️",
+      "titre": "Retour à Port Moresby",
+      "legende": "Après avoir exploré les merveilles volcaniques et sous-marines de Rabaul, il est temps de retourner à Port Moresby. Ce vol de transition vous permettra de vous reposer et de vous préparer pour la prochaine étape de votre aventure. L'après-midi sera libre pour une dernière exploration de la capitale ou simplement pour vous détendre et profiter des commodités de votre hôtel.",
+      "lieu": "Port Moresby",
+      "activites": [
+        "✈️ <strong>Vol Rabaul - Port Moresby</strong>: Prenez un vol intérieur pour revenir à Port Moresby. Le temps de vol est d'environ 1h30.",
+        "🚶‍♂️ <strong>Balade libre en ville</strong>: Profitez de l'après-midi pour une balade tranquille dans un quartier sûr de Port Moresby ou pour faire quelques achats de dernière minute."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🛍️",
+          "titre": "Shopping",
+          "texte": "Le quartier de Boroko à Port Moresby offre quelques options pour l'artisanat local."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🏞️",
+      "titre": "Les Fjords de Tufi",
+      "legende": "Aujourd'hui, vous vous envolerez vers Tufi, une région côtière spectaculaire réputée pour ses fjords volcaniques uniques et ses eaux cristallines. C'est un paradis pour les amoureux de la nature et les plongeurs. L'arrivée à Tufi est une expérience en soi, avec des vues aériennes à couper le souffle. Installez-vous dans votre lodge et préparez-vous à explorer ce joyau caché.",
+      "lieu": "Tufi",
+      "activites": [
+        "✈️ <strong>Vol vers Tufi</strong>: Prenez un vol pittoresque de Port Moresby à Tufi, offrant des vues aériennes incroyables sur les fjords.",
+        "🚤 <strong>Excursion en bateau dans les fjords</strong>: Explorez les magnifiques fjords de Tufi en bateau, admirant les falaises abruptes et la végétation luxuriante."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "🛏️",
+          "titre": "Hébergement",
+          "texte": "Les lodges à Tufi sont souvent isolés et offrent une expérience immersive dans la nature."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "💃",
+      "titre": "Culture et Traditions de Tufi",
+      "legende": "Immergez-vous dans la culture locale de Tufi en visitant un village traditionnel. Vous aurez l'occasion de rencontrer les habitants, de découvrir leurs coutumes ancestrales et d'assister à des démonstrations de danse et d'artisanat. C'est une opportunité unique de comprendre le mode de vie des communautés côtières et de partager un moment authentique avec elles.",
+      "lieu": "Tufi",
+      "activites": [
+        "🚶‍♀️ <strong>Visite d'un village local</strong>: Rencontrez les habitants, découvrez leurs techniques de fabrication de tapa (tissu d'écorce) et leurs traditions.",
+        "🎭 <strong>Spectacle culturel traditionnel</strong>: Assistez à des danses et chants locaux, souvent accompagnés de costumes colorés et de percussions."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "🤝",
+          "titre": "Interaction",
+          "texte": "Les habitants de Tufi sont très accueillants. Un sourire et un \"Tenkyu\" (merci en Tok Pisin) ouvrent bien des portes."
+        }
+      ]
+    },
+    {
+      "jour": 16,
+      "symbole": "🌊",
+      "titre": "Activités Aquatiques à Tufi",
+      "legende": "Les eaux claires de Tufi sont idéales pour une variété d'activités aquatiques. Que vous soyez amateur de plongée sous-marine, de snorkeling ou de kayak, vous trouverez votre bonheur. Explorez les récifs coralliens vibrants, nagez parmi les poissons tropicaux ou pagayez tranquillement le long des fjords, admirant la beauté naturelle de cette région préservée.",
+      "lieu": "Tufi",
+      "activites": [
+        "🐠 <strong>Plongée sous-marine ou snorkeling</strong>: Explorez les récifs coralliens immaculés de Tufi, réputés pour leur biodiversité marine exceptionnelle.",
+        "🚣‍♀️ <strong>Kayak ou paddleboard dans les fjords</strong>: Pagayez à travers les fjords, offrant une perspective unique sur les falaises et la végétation luxuriante."
+      ],
+      "illustration": "jour16.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection",
+          "texte": "N'oubliez pas la crème solaire biodégradable, un chapeau et des lunettes de soleil pour les activités en extérieur."
+        }
+      ]
+    },
+    {
+      "jour": 17,
+      "symbole": "✈️",
+      "titre": "Derniers Instants à Tufi et Retour à la Capitale",
+      "legende": "Profitez d'une dernière matinée paisible à Tufi, peut-être pour une courte balade ou simplement pour admirer la vue depuis votre lodge. Il sera ensuite temps de prendre votre vol de retour vers Port Moresby. Ce sera l'occasion de revoir les paysages spectaculaires depuis les airs et de vous préparer pour votre départ international. Une journée de transition pour clore cette magnifique exploration.",
+      "lieu": "Port Moresby",
+      "activites": [
+        "🚶‍♂️ <strong>Balade matinale et détente</strong>: Profitez des dernières heures à Tufi pour une balade légère ou un moment de relaxation au lodge.",
+        "✈️ <strong>Vol Tufi - Port Moresby</strong>: Reprenez un vol intérieur pour Port Moresby, où vous passerez votre dernière nuit en Papouasie-Nouvelle-Guinée."
+      ],
+      "illustration": "jour17.jpg",
+      "encarts": [
+        {
+          "symbole": "🧳",
+          "titre": "Bagages",
+          "texte": "Les vols intérieurs ont souvent des restrictions de poids strictes pour les bagages. Vérifiez avant de voyager."
+        }
+      ]
+    },
+    {
+      "jour": 18,
+      "symbole": "🐒",
+      "titre": "Nature et Souvenirs à Port Moresby",
+      "legende": "Pour votre dernière journée complète en Papouasie-Nouvelle-Guinée, explorez la richesse naturelle de Port Moresby. Le Nature Park offre une opportunité unique d'observer la faune locale, y compris les célèbres oiseaux de paradis. L'après-midi sera dédiée aux derniers achats de souvenirs, pour ramener un morceau de ce pays extraordinaire chez vous. Une fin de voyage en douceur.",
+      "lieu": "Port Moresby",
+      "activites": [
+        "🌳 <strong>Visite du Port Moresby Nature Park</strong>: Découvrez la faune et la flore indigènes, y compris des oiseaux de paradis, des kangourous arboricoles et des crocodiles.",
+        "🎁 <strong>Achats de souvenirs</strong>: Flânez dans les boutiques d'artisanat pour trouver des masques, des sculptures ou des bijoux locaux."
+      ],
+      "illustration": "jour18.jpg",
+      "encarts": [
+        {
+          "symbole": "🦜",
+          "titre": "Faune",
+          "texte": "Le Nature Park est un excellent endroit pour voir les oiseaux de paradis, emblème du pays."
+        }
+      ]
+    },
+    {
+      "jour": 19,
+      "symbole": "🛫",
+      "titre": "Départ de Papouasie-Nouvelle-Guinée",
+      "legende": "C'est le dernier jour de votre incroyable voyage en Papouasie-Nouvelle-Guinée. Après le petit-déjeuner, vous serez transféré à l'aéroport international Jackson pour votre vol de retour. Emportez avec vous des souvenirs inoubliables de paysages époustouflants, de cultures vibrantes et de rencontres humaines authentiques. Ce voyage restera gravé dans votre mémoire comme une aventure hors du commun.",
+      "lieu": "Port Moresby",
+      "activites": [
+        "🛫 <strong>Transfert à l'aéroport et vol retour</strong>: Après le petit-déjeuner, un transfert vous conduira à l'aéroport pour votre vol international."
+      ],
+      "illustration": "jour19.jpg",
+      "encarts": [
+        {
+          "symbole": "👋",
+          "titre": "Au revoir",
+          "texte": "La Papouasie-Nouvelle-Guinée est un pays qui marque les esprits. Nous espérons que vous reviendrez!"
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "3500€/pers (Vol A/R Renault, USA - Port Moresby, classe économique)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "1500€/pers (Vols intérieurs, transferts terrestres et maritimes)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "1235€/pers (Repas variés, incluant des expériences locales)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "3600€/pers (18 nuits en hôtels 3 étoiles, confort standard)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "1000€/pers (Excursions guidées, droits d'entrée, spectacles culturels)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de mai et octobre.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "La saison sèche (mai à octobre) offre un climat plus stable et des conditions de voyage optimales.",
+      "symbole": "🗓️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La Papouasie-Nouvelle-Guinée est l'un des pays les plus diversifiés au monde, avec plus de 800 langues indigènes.",
+      "symbole": "🗣️"
+    },
+    {
+      "titre": "Le pays est réputé pour sa biodiversité exceptionnelle, abritant des espèces uniques comme les oiseaux de paradis.",
+      "symbole": "🦋"
+    },
+    {
+      "titre": "La sécurité est une préoccupation, surtout à Port Moresby. Il est recommandé d'utiliser des guides locaux fiables et d'éviter de se promener seul la nuit.",
+      "symbole": "🚨"
+    },
+    {
+      "titre": "Les \"Sing-sings\" sont des festivals culturels vibrants où les tribus se rassemblent pour des chants et des danses traditionnels, une expérience inoubliable.",
+      "symbole": "🥁"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme",
+      "titre": "Papua New Guinea Tourism Promotion Authority",
+      "url": "https://www.papuanewguinea.travel/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Compagnie aérienne nationale pour les vols intérieurs",
+      "titre": "Air Niugini",
+      "url": "https://www.airniugini.com.pg/",
+      "symbole": "✈️"
+    },
+    {
+      "legende": "Prévisions météo locales",
+      "titre": "Météo PNG",
+      "url": "https://www.pngmet.gov.pg/",
+      "symbole": "🌤️"
+    }
+  ]
+}
