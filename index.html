@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventure au Cœur de la Papouasie-Nouvelle-Guinée: Culture et Nature Sauvage </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Port Moresby</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Culture et Histoire à Port Moresby</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Envol vers les Hautes Terres et Rencontre Culturelle</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Exploration des Marchés et Paysages Montagneux</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Vers le Mystérieux Fleuve Sepik</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Art et Traditions du Sepik</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Faune et Légendes du Fleuve</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Lever de Soleil sur le Sepik et Retour</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 De Wewak à Port Moresby</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Volcans et Histoire à Rabaul</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Vestiges de Guerre et Sources Chaudes</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Plongée et Vie Marine de Rabaul</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Retour à Port Moresby</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Les Fjords de Tufi</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Culture et Traditions de Tufi</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Activités Aquatiques à Tufi</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Derniers Instants à Tufi et Retour à la Capitale</a>
+            
+                <a href="#jour-18" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J18 Nature et Souvenirs à Port Moresby</a>
+            
+                <a href="#jour-19" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J19 Départ de Papouasie-Nouvelle-Guinée</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">PAPOUASIE- NOUVELLE- GUINEE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Aventure au Cœur de la Papouasie-Nouvelle-Guinée: Culture et Nature Sauvage</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 19 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 11000€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 30h depuis Renault, etats unis avec escales</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Port Moresby</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, votre aventure débute dans la capitale animée de la Papouasie-Nouvelle-Guinée. Prenez le temps de vous installer et de vous imprégner de l'atmosphère locale. La journée sera légère pour vous permettre de récupérer du décalage horaire et de la fatigue du vol. Profitez de la fin de journée pour une première découverte des environs immédiats de votre hôtel.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée et transfert</strong>: Après un long voyage, vous serez accueilli à l'aéroport international Jackson. Un transfert privé vous mènera à votre hôtel pour un repos bien mérité.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le visa est obligatoire pour la Papouasie-Nouvelle-Guinée. Il est recommandé de l'obtenir avant le départ.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Culture et Histoire à Port Moresby</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'histoire et la culture fascinante de la Papouasie-Nouvelle-Guinée. Cette journée vous offrira un aperçu des traditions ancestrales et de l'art contemporain du pays. Vous découvrirez des artefacts uniques et des récits captivants qui façonnent l'identité de cette nation insulaire. Une immersion douce pour comprendre la richesse de ce peuple.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Visite du Musée National et de la Galerie d'Art</strong>: Explorez les collections d'artefacts tribaux, de masques et d'œuvres d'art contemporain qui racontent l'histoire et la diversité culturelle du pays.</li><li>🌳 <strong>Découverte du Parlement National</strong>: Admirez l'architecture impressionnante du bâtiment du Parlement, inspirée des maisons des esprits traditionnelles, et apprenez-en plus sur la gouvernance locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Engagez un guide local pour une meilleure compréhension des expositions et de l'histoire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Envol vers les Hautes Terres et Rencontre Culturelle</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, vous quittez la capitale pour les majestueuses Hautes Terres, le cœur culturel de la Papouasie-Nouvelle-Guinée. Un vol intérieur vous mènera à Mount Hagen, où vous serez immédiatement plongé dans un monde de traditions ancestrales. La rencontre avec une communauté locale vous offrira un aperçu authentique de leur mode de vie et de leurs coutumes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol vers Mount Hagen</strong>: Prenez un vol matinal pour Mount Hagen, la troisième plus grande ville du pays et porte d'entrée des Hautes Terres.</li><li>🤝 <strong>Visite d'un village traditionnel</strong>: Rencontrez les habitants d'un village Huli ou Melpa, découvrez leurs "sing-sings" (danses et chants) et leur artisanat unique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Demandez toujours la permission avant de photographier les personnes, par respect pour leur culture.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Exploration des Marchés et Paysages Montagneux</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Immergez-vous davantage dans la vie quotidienne des Hautes Terres en explorant le marché animé de Mount Hagen. C'est un festival de couleurs, de sons et d'odeurs où les produits locaux et l'artisanat sont rois. L'après-midi sera dédiée à la découverte des paysages environnants, offrant des vues imprenables sur les vallées verdoyantes et les montagnes brumeuses.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Marché de Mount Hagen</strong>: Flânez dans le marché local, un lieu vibrant où les différentes tribus viennent vendre leurs produits agricoles et artisanaux.</li><li>⛰️ <strong>Randonnée légère dans les environs</strong>: Profitez d'une balade guidée pour admirer les paysages luxuriants des Hautes Terres et observer la faune locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Monnaie</p>
+                                <p class="text-gray-700">La monnaie locale est le Kina (PGK). Prévoyez de la petite monnaie pour les marchés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers le Mystérieux Fleuve Sepik</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui marque un changement de décor spectaculaire alors que vous vous dirigez vers la région du fleuve Sepik. Un vol vous mènera à Wewak, point de départ de votre exploration de cette voie navigable légendaire. Le Sepik est réputé pour ses cultures tribales uniques, son art complexe et ses paysages fluviaux d'une beauté sauvage. Préparez-vous à une immersion profonde.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol vers Wewak</strong>: Prenez un vol matinal de Mount Hagen à Wewak, la porte d'entrée de la région du Sepik.</li><li>🚤 <strong>Transfert vers le fleuve Sepik</strong>: De Wewak, un transfert en véhicule puis en pirogue motorisée vous mènera à votre lodge ou village d'accueil le long du fleuve.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦟 Santé</p>
+                                <p class="text-gray-700">La région du Sepik est une zone à risque de paludisme. Prévoyez des répulsifs et une prophylaxie.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art et Traditions du Sepik</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Naviguez sur les eaux calmes du fleuve Sepik, véritable artère vitale pour les communautés qui le bordent. Cette journée sera dédiée à la découverte de l'art et des traditions ancestrales des peuples du Sepik. Vous visiterez des "maisons des esprits" ornées de sculptures impressionnantes et assisterez à des démonstrations d'artisanat, témoins d'un savoir-faire unique transmis de génération en génération.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛶 <strong>Exploration en pirogue</strong>: Naviguez sur le fleuve Sepik, observant la vie quotidienne le long des rives et la faune aquatique.</li><li>🗿 <strong>Visite de maisons des esprits (Haus Tambaran)</strong>: Découvrez les impressionnantes maisons des esprits, centres de la vie culturelle et spirituelle des villages, ornées de sculptures et de peintures.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Le Sepik est réputé pour ses sculptures sur bois. Achetez directement auprès des artisans pour soutenir les communautés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Faune et Légendes du Fleuve</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Poursuivez votre immersion dans l'écosystème unique du Sepik. Cette journée vous mènera à travers des paysages de jungle dense et de marécages, à la rencontre de la faune locale. Vous aurez l'occasion d'en apprendre davantage sur les légendes et les croyances qui entourent le fleuve, notamment le rôle sacré du crocodile dans la culture Sepik. Une expérience authentique au cœur de la nature sauvage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌿 <strong>Randonnée dans la jungle</strong>: Accompagné d'un guide local, explorez la forêt tropicale bordant le fleuve, à la recherche d'oiseaux exotiques et d'autres animaux.</li><li>🎣 <strong>Pêche traditionnelle ou observation des crocodiles</strong>: Participez à une session de pêche avec les locaux ou tentez d'apercevoir des crocodiles dans leur habitat naturel.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langues</p>
+                                <p class="text-gray-700">Le Tok Pisin est la langue véhiculaire. Apprendre quelques mots sera très apprécié par les locaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lever de Soleil sur le Sepik et Retour</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'un dernier lever de soleil spectaculaire sur le fleuve Sepik, un moment de quiétude avant de reprendre le chemin du retour. Cette matinée sera l'occasion de savourer les derniers instants de cette expérience unique, peut-être en visitant un dernier village ou en échangeant avec vos hôtes. Vous quitterez le Sepik avec des souvenirs impérissables de sa culture et de sa nature indomptée.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌄 <strong>Lever de soleil sur le fleuve</strong>: Observez le soleil se lever sur le Sepik, offrant des couleurs magnifiques et une atmosphère paisible.</li><li>🚤 <strong>Retour vers Wewak</strong>: Reprenez la pirogue motorisée puis le véhicule pour retourner à Wewak, en prévision de votre vol du lendemain.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Eau</p>
+                                <p class="text-gray-700">Buvez uniquement de l'eau en bouteille ou purifiée pour éviter les problèmes de santé.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">De Wewak à Port Moresby</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'aventure fluviale, cette journée est consacrée au retour vers la capitale. Un vol intérieur vous ramènera à Port Moresby, offrant une transition entre les paysages sauvages du Sepik et l'ambiance plus urbaine. Profitez de ce temps de trajet pour vous reposer et réfléchir aux expériences vécues. L'après-midi sera libre pour une détente bien méritée ou une exploration légère.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol Wewak - Port Moresby</strong>: Prenez un vol intérieur pour retourner à Port Moresby. Le temps de vol est d'environ 1h30.</li><li>🏨 <strong>Détente à l'hôtel</strong>: Profitez de l'après-midi pour vous reposer à l'hôtel ou explorer les environs immédiats à votre guise.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌐 Connectivité</p>
+                                <p class="text-gray-700">La connexion internet peut être limitée et coûteuse en dehors des grandes villes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Volcans et Histoire à Rabaul</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Envolez-vous vers la province de la Nouvelle-Bretagne orientale, une région marquée par son histoire volcanique et son rôle crucial pendant la Seconde Guerre mondiale. Rabaul, autrefois une ville florissante, a été ensevelie par les cendres volcaniques, mais son esprit perdure. Vous explorerez les vestiges de cette histoire tumultueuse et les paysages lunaires façonnés par les volcans actifs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol vers Rabaul/Kokopo</strong>: Prenez un vol matinal de Port Moresby à Rabaul (aéroport de Tokua), puis transfert vers Kokopo.</li><li>🌋 <strong>Observation des volcans actifs</strong>: Admirez les volcans Tavurvur et Vulcan, témoins de l'activité géologique intense de la région.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Sécurité</p>
+                                <p class="text-gray-700">Respectez toujours les consignes de sécurité près des volcans actifs et des sites historiques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vestiges de Guerre et Sources Chaudes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée vous plongera dans le passé de Rabaul, un site stratégique majeur durant la Seconde Guerre mondiale. Vous explorerez les tunnels et les bunkers japonais, témoins silencieux des combats acharnés. L'après-midi offrira un contraste apaisant avec une visite des sources chaudes volcaniques, une occasion unique de se détendre dans un cadre naturel spectaculaire.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🪖 <strong>Visite des tunnels et bunkers japonais</strong>: Explorez les vastes réseaux de tunnels creusés par les Japonais pendant la Seconde Guerre mondiale.</li><li>♨️ <strong>Bains dans les sources chaudes volcaniques</strong>: Détendez-vous dans les sources chaudes naturelles, chauffées par l'activité volcanique souterraine.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Orientation</p>
+                                <p class="text-gray-700">Un guide local est indispensable pour naviguer en toute sécurité sur les sites historiques et volcaniques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Plongée et Vie Marine de Rabaul</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Les eaux autour de Rabaul sont un paradis pour les plongeurs et les amateurs de snorkeling, abritant une vie marine foisonnante et de nombreuses épaves de la Seconde Guerre mondiale. Cette journée vous permettra d'explorer ces trésors sous-marins, offrant des rencontres inoubliables avec des poissons colorés et des coraux vibrants. Une expérience aquatique mémorable vous attend.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li> snorkelling <strong>Plongée ou snorkeling dans la baie de Rabaul</strong>: Explorez les récifs coralliens colorés et les épaves de la Seconde Guerre mondiale, abritant une vie marine abondante.</li><li>🏝️ <strong>Excursion sur une île voisine</strong>: Profitez d'une excursion en bateau vers une petite île pour vous détendre sur ses plages de sable blanc et nager dans des eaux cristallines.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤿 Équipement</p>
+                                <p class="text-gray-700">Les centres de plongée locaux proposent la location d'équipement. Pensez à réserver à l'avance.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Port Moresby</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après avoir exploré les merveilles volcaniques et sous-marines de Rabaul, il est temps de retourner à Port Moresby. Ce vol de transition vous permettra de vous reposer et de vous préparer pour la prochaine étape de votre aventure. L'après-midi sera libre pour une dernière exploration de la capitale ou simplement pour vous détendre et profiter des commodités de votre hôtel.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol Rabaul - Port Moresby</strong>: Prenez un vol intérieur pour revenir à Port Moresby. Le temps de vol est d'environ 1h30.</li><li>🚶‍♂️ <strong>Balade libre en ville</strong>: Profitez de l'après-midi pour une balade tranquille dans un quartier sûr de Port Moresby ou pour faire quelques achats de dernière minute.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛍️ Shopping</p>
+                                <p class="text-gray-700">Le quartier de Boroko à Port Moresby offre quelques options pour l'artisanat local.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Les Fjords de Tufi</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, vous vous envolerez vers Tufi, une région côtière spectaculaire réputée pour ses fjords volcaniques uniques et ses eaux cristallines. C'est un paradis pour les amoureux de la nature et les plongeurs. L'arrivée à Tufi est une expérience en soi, avec des vues aériennes à couper le souffle. Installez-vous dans votre lodge et préparez-vous à explorer ce joyau caché.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol vers Tufi</strong>: Prenez un vol pittoresque de Port Moresby à Tufi, offrant des vues aériennes incroyables sur les fjords.</li><li>🚤 <strong>Excursion en bateau dans les fjords</strong>: Explorez les magnifiques fjords de Tufi en bateau, admirant les falaises abruptes et la végétation luxuriante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛏️ Hébergement</p>
+                                <p class="text-gray-700">Les lodges à Tufi sont souvent isolés et offrent une expérience immersive dans la nature.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Culture et Traditions de Tufi</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Immergez-vous dans la culture locale de Tufi en visitant un village traditionnel. Vous aurez l'occasion de rencontrer les habitants, de découvrir leurs coutumes ancestrales et d'assister à des démonstrations de danse et d'artisanat. C'est une opportunité unique de comprendre le mode de vie des communautés côtières et de partager un moment authentique avec elles.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♀️ <strong>Visite d'un village local</strong>: Rencontrez les habitants, découvrez leurs techniques de fabrication de tapa (tissu d'écorce) et leurs traditions.</li><li>🎭 <strong>Spectacle culturel traditionnel</strong>: Assistez à des danses et chants locaux, souvent accompagnés de costumes colorés et de percussions.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Interaction</p>
+                                <p class="text-gray-700">Les habitants de Tufi sont très accueillants. Un sourire et un "Tenkyu" (merci en Tok Pisin) ouvrent bien des portes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Activités Aquatiques à Tufi</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Les eaux claires de Tufi sont idéales pour une variété d'activités aquatiques. Que vous soyez amateur de plongée sous-marine, de snorkeling ou de kayak, vous trouverez votre bonheur. Explorez les récifs coralliens vibrants, nagez parmi les poissons tropicaux ou pagayez tranquillement le long des fjords, admirant la beauté naturelle de cette région préservée.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🐠 <strong>Plongée sous-marine ou snorkeling</strong>: Explorez les récifs coralliens immaculés de Tufi, réputés pour leur biodiversité marine exceptionnelle.</li><li>🚣‍♀️ <strong>Kayak ou paddleboard dans les fjords</strong>: Pagayez à travers les fjords, offrant une perspective unique sur les falaises et la végétation luxuriante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection</p>
+                                <p class="text-gray-700">N'oubliez pas la crème solaire biodégradable, un chapeau et des lunettes de soleil pour les activités en extérieur.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Instants à Tufi et Retour à la Capitale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une dernière matinée paisible à Tufi, peut-être pour une courte balade ou simplement pour admirer la vue depuis votre lodge. Il sera ensuite temps de prendre votre vol de retour vers Port Moresby. Ce sera l'occasion de revoir les paysages spectaculaires depuis les airs et de vous préparer pour votre départ international. Une journée de transition pour clore cette magnifique exploration.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♂️ <strong>Balade matinale et détente</strong>: Profitez des dernières heures à Tufi pour une balade légère ou un moment de relaxation au lodge.</li><li>✈️ <strong>Vol Tufi - Port Moresby</strong>: Reprenez un vol intérieur pour Port Moresby, où vous passerez votre dernière nuit en Papouasie-Nouvelle-Guinée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧳 Bagages</p>
+                                <p class="text-gray-700">Les vols intérieurs ont souvent des restrictions de poids strictes pour les bagages. Vérifiez avant de voyager.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-18" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 18</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature et Souvenirs à Port Moresby</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour votre dernière journée complète en Papouasie-Nouvelle-Guinée, explorez la richesse naturelle de Port Moresby. Le Nature Park offre une opportunité unique d'observer la faune locale, y compris les célèbres oiseaux de paradis. L'après-midi sera dédiée aux derniers achats de souvenirs, pour ramener un morceau de ce pays extraordinaire chez vous. Une fin de voyage en douceur.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌳 <strong>Visite du Port Moresby Nature Park</strong>: Découvrez la faune et la flore indigènes, y compris des oiseaux de paradis, des kangourous arboricoles et des crocodiles.</li><li>🎁 <strong>Achats de souvenirs</strong>: Flânez dans les boutiques d'artisanat pour trouver des masques, des sculptures ou des bijoux locaux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour18.jpg" class="w-full h-64 object-cover" alt="Jour 18">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦜 Faune</p>
+                                <p class="text-gray-700">Le Nature Park est un excellent endroit pour voir les oiseaux de paradis, emblème du pays.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-19" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 19</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Papouasie-Nouvelle-Guinée</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le dernier jour de votre incroyable voyage en Papouasie-Nouvelle-Guinée. Après le petit-déjeuner, vous serez transféré à l'aéroport international Jackson pour votre vol de retour. Emportez avec vous des souvenirs inoubliables de paysages époustouflants, de cultures vibrantes et de rencontres humaines authentiques. Ce voyage restera gravé dans votre mémoire comme une aventure hors du commun.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛫 <strong>Transfert à l'aéroport et vol retour</strong>: Après le petit-déjeuner, un transfert vous conduira à l'aéroport pour votre vol international.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Papouasie-nouvelle-guinee-z0rf2urg19669b9/main/jour19.jpg" class="w-full h-64 object-cover" alt="Jour 19">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👋 Au revoir</p>
+                                <p class="text-gray-700">La Papouasie-Nouvelle-Guinée est un pays qui marque les esprits. Nous espérons que vous reviendrez!</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>3500€/pers (Vol A/R Renault, USA - Port Moresby, classe économique)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>1500€/pers (Vols intérieurs, transferts terrestres et maritimes)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>1235€/pers (Repas variés, incluant des expériences locales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>3600€/pers (18 nuits en hôtels 3 étoiles, confort standard)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>1000€/pers (Excursions guidées, droits d'entrée, spectacles culturels)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de mai et octobre.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">La saison sèche (mai à octobre) offre un climat plus stable et des conditions de voyage optimales.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ La Papouasie-Nouvelle-Guinée est l'un des pays les plus diversifiés au monde, avec plus de 800 langues indigènes.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🦋 Le pays est réputé pour sa biodiversité exceptionnelle, abritant des espèces uniques comme les oiseaux de paradis.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚨 La sécurité est une préoccupation, surtout à Port Moresby. Il est recommandé d'utiliser des guides locaux fiables et d'éviter de se promener seul la nuit.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🥁 Les "Sing-sings" sont des festivals culturels vibrants où les tribus se rassemblent pour des chants et des danses traditionnels, une expérience inoubliable.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Papouasie-nouvelle-guinee-z0rf2urg19669b9/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.papuanewguinea.travel/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Papua New Guinea Tourism Promotion Authority</strong></a></li>
+                    
+                        <li><a href="https://www.airniugini.com.pg/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>✈️ Air Niugini</strong></a></li>
+                    
+                        <li><a href="https://www.pngmet.gov.pg/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo PNG</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
