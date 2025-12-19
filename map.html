@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte du voyage - Papouasie-nouvelle-guinee</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    .info-window { max-width: 250px; font-family: Arial, sans-serif; }
+    .info-window img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
+    .info-window h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
+    .info-window p { margin: 5px 0; font-size: 14px; color: #666; }
+    .info-window a { color: #1a73e8; text-decoration: none; }
+    .info-window a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  
+  <script>
+    function initMap() {
+      const center = { lat: -5.862656561132171, lng: 145.89578937967244 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: center
+      });
+      
+      const markers = [{"lat":-9.4790043,"lng":147.1494164,"name":"Port Moresby","jour":1,"titre":"Arrivée à Port Moresby","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=-9.4790043,147.1494164&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-9.4790043,147.1494164","aiImageUrl":"jour1.jpg"},{"lat":-5.857675599999999,"lng":144.2326149,"name":"Mount Hagen","jour":3,"titre":"Envol vers les Hautes Terres et Rencontre Culturelle","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=-5.857675599999999,144.2326149&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-5.857675599999999,144.2326149","aiImageUrl":"jour3.jpg"},{"lat":-4.090294642641735,"lng":142.7681256192357,"name":"Wewak / Fleuve Sepik","jour":5,"titre":"Vers le Mystérieux Fleuve Sepik","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=-4.090294642641735,142.7681256192357&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-4.090294642641735,142.7681256192357","aiImageUrl":"jour5.jpg"},{"lat":-4.090294642641735,"lng":142.7681256192357,"name":"Fleuve Sepik","jour":6,"titre":"Art et Traditions du Sepik","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=-4.090294642641735,142.7681256192357&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-4.090294642641735,142.7681256192357","aiImageUrl":"jour6.jpg"},{"lat":-4.090294642641735,"lng":142.7681256192357,"name":"Fleuve Sepik / Wewak","jour":8,"titre":"Lever de Soleil sur le Sepik et Retour","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=-4.090294642641735,142.7681256192357&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-4.090294642641735,142.7681256192357","aiImageUrl":"jour8.jpg"},{"lat":-4.351351500000001,"lng":152.2673118,"name":"Rabaul / Kokopo","jour":10,"titre":"Volcans et Histoire à Rabaul","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=-4.351351500000001,152.2673118&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-4.351351500000001,152.2673118","aiImageUrl":"jour10.jpg"},{"lat":-9.0796806,"lng":149.3168057,"name":"Tufi","jour":14,"titre":"Les Fjords de Tufi","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=-9.0796806,149.3168057&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-9.0796806,149.3168057","aiImageUrl":"jour14.jpg"}];
+      
+      markers.forEach((markerData) => {
+        const marker = new google.maps.Marker({
+          position: { lat: markerData.lat, lng: markerData.lng },
+          map: map,
+          title: markerData.name,
+          label: String(markerData.jour)
+        });
+        
+        const contentString = `
+          <div class="info-window">
+            <img src="${markerData.streetViewUrl}" alt="Street View de ${markerData.name}" />
+            <h3>Jour ${markerData.jour}</h3>
+            <p><strong>${markerData.name}</strong></p>
+            <p><a href="${markerData.streetViewLinkUrl}" target="_blank" rel="noopener noreferrer"><strong>${markerData.titre}</strong></a></p>
+          </div>
+        `;
+        
+        const infoWindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        marker.addListener('click', () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+  
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI&callback=initMap">
+  </script>
+</body>
+</html>
